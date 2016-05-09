@@ -1,0 +1,13 @@
+<html>
+  <head><title>Call your parents</title></head>
+  <body>
+    <div id="new-home"></div>
+    <script>
+      if (window.opener) {
+        console.log(window.opener);
+        document.querySelector('#new-home').appendChild(window.opener.document.body);
+        window.opener.document.title = 'You\'re mine now!';
+      }
+    </script>
+  </body>
+</html>
